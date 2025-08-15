@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import SampleDataControls from '@/components/SampleDataControls';
 
 const PetList = dynamic(() => import('@/components/PetList'), { ssr: false });
 
@@ -11,6 +12,7 @@ export default function AdopterPage() {
         <Link href="/owner" className="button secondary">Go to Owner</Link>
       </div>
       <h3>Find your new friend</h3>
+      <SampleDataControls />
       <PetList />
     </div>
   );
